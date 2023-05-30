@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { api } from "@/utils/api";
 import { Button } from "@/components";
+import Toggle from "@/components/toggle";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex justify-center items-center mt-5">
         <Button label="Submit" />
+        <Toggle />
       </div>
     </>
   );
